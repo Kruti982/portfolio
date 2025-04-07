@@ -1,62 +1,126 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 import headback from "./headback.jpg";
-import profilephoto from "./profilephoto.jpg";
+import MyImage from "../MyImage.JPG";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
 
 export default function PfIntro() {
   return (
     <>
       <div
         style={{
+          marginTop: "-19px",
           backgroundImage: `url(${headback}`,
+          opacity: "80%",
           boxSizing: "border-box",
           width: "100%",
           height: "80vh",
           backgroundRepeat: "no-rpeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          position: "absolute",
         }}
       >
-        <Box
-          sx={{
-            marginTop: "5rem",
-            display: "flex",
-            flexWrap: "wrap",
-            position: "relative",
-            "& > :not(style)": {
-              m: 1,
-            },
+        <h1
+          style={{
+            color: "white",
+            padding: "12rem",
+            backgroundColor: "black",
             opacity: "50%",
           }}
         >
-          <Card sx={{ maxWidth: 345 }}>
-            <CardMedia
-              sx={{ height: 140 }}
-              image={require("profilephoto")}
-              title="green iguana"
-            />
+          Senior Web Developer
+        </h1>
+      </div>
+      <div>
+        <Box
+          sx={{
+            backgroundColor: "black",
+            height: "100%",
+            opacity: "75%",
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-evenly",
+            "& > :not(style)": {
+              m: 1,
+            },
+          }}
+        >
+          <Card
+            sx={{ maxWidth: 345, opacity: "80%", backgroundColor: "black" }}
+          >
+            <CardMedia sx={{ height: 250 }} image={MyImage} />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Lizard
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="div"
+                sx={{
+                  color: "white",
+                  alignItems: "center",
+                }}
+              >
+                Senior Web Developer
               </Typography>
-              <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
+              <Typography
+                variant="body2"
+                sx={{ color: "text.secondary", color: "white" }}
+              >
+                Experienced in building scalable, user-friendly web applications
+                with modern technologies. Passionate about clean code,
+                responsive design, and delivering seamless user experiences.
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small">Share</Button>
-              <Button size="small">Learn More</Button>
-            </CardActions>
           </Card>
+          <div
+            style={{
+              padding: "5rem",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "white",
+              backgroundColor: "#424242",
+              height: "50vh",
+              width: "50vw",
+              opacity: "75%",
+            }}
+          >
+            SignIn
+            <TextField id="standard-basic" label="Email" variant="standard" />
+            <div>
+              <TextField
+                id="standard-basic"
+                label="Password"
+                variant="standard"
+              />
+            </div>
+            <div>
+              <Button
+                variant="contained"
+                sx={{
+                  marginTop: "1rem",
+                  marginBottom: "1rem",
+                  textAlign: "center",
+                }}
+              >
+                Proceed
+              </Button>
+              <div>
+                <p>
+                  Do not have an account?{" "}
+                  <a href="/" style={{ color: "#909dff" }}>
+                    SignUp
+                  </a>{" "}
+                  here!!
+                </p>
+              </div>
+            </div>
+          </div>
         </Box>
       </div>
     </>

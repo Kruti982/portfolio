@@ -14,10 +14,9 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
-import Paper from "@mui/material/Paper";
+import AccountBoxIcon from "@mui/icons-material/AccountBox";
+import CheckBoxIcon from "@mui/icons-material/CheckBox";
 
 const drawerWidth = 240;
 const navItems = [];
@@ -82,11 +81,11 @@ function PfHead(props) {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+        {["About", "Projects", "Contact", "Git link"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <AccountBoxIcon /> : <CheckBoxIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -95,11 +94,11 @@ function PfHead(props) {
       </List>
       <Divider />
       <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
+        {["Resume", "LinkedIn Profile"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <AccountBoxIcon /> : <CheckBoxIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
