@@ -16,7 +16,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
-import CheckBoxIcon from "@mui/icons-material/CheckBox";
+import FactCheckIcon from "@mui/icons-material/FactCheck";
 
 const drawerWidth = 240;
 const navItems = [];
@@ -85,7 +85,7 @@ function PfHead(props) {
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <AccountBoxIcon /> : <CheckBoxIcon />}
+                {index % 2 === 0 ? <AccountBoxIcon /> : <FactCheckIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -98,7 +98,7 @@ function PfHead(props) {
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <AccountBoxIcon /> : <CheckBoxIcon />}
+                {index % 2 === 0 ? <AccountBoxIcon /> : <FactCheckIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
