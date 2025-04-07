@@ -8,8 +8,17 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
+import { useNavigate } from "react-router-dom";
 
 export default function PfIntro() {
+  const navigate = useNavigate();
+  const handleRegister = () => {
+    
+    navigate("/registeration");
+
+
+  }
+
   return (
     <>
       <div
@@ -113,9 +122,9 @@ export default function PfIntro() {
               <div>
                 <p>
                   Do not have an account?{" "}
-                  <a href="/" style={{ color: "#909dff" }}>
+                  < span style={{ color: "#909dff" }} onClick={handleRegister} >
                     SignUp
-                  </a>{" "}
+                  </ span>{" "}
                   here!!
                 </p>
               </div>
