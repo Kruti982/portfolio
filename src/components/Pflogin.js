@@ -9,10 +9,16 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import "./SignUpPage.css";
+// import SignUpPage from './SignUpPage'
+import { useNavigate } from "react-router-dom";
+
 
 export default function PfIntro() {
-  const SignUpPage = () => {
-    console.log("SignUp clicked");
+  const navigate = useNavigate();
+  const SignUpPage = (e) => {
+    // console.log("SignUp clicked");
+    e.preventDefault();
+    navigate("/SignUpPage");
   };
   return (
     <>
@@ -88,17 +94,32 @@ export default function PfIntro() {
               backgroundColor: "#424242",
               height: "50vh",
               width: "50vw",
-              opacity: "75%",
+            //   opacity: "40%",
             }}
           >
             SignIn
-            <TextField id="standard-basic" label="Email" variant="standard" />
+            <TextField id="standard-basic" label="Email" variant="standard" sx={{fontWeight: 'bold'}}/>
             <div>
               <TextField
-                id="standard-basic"
-                label="Password"
-                variant="standard"
-              />
+                          label="Password"
+                          type={showPassword ? "text" : "password"}
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
+                          variant="standard"
+                          fullWidth
+                          InputProps={{
+                            endAdornment: (
+                              <InputAdornment position="end">
+                                <IconButton
+                                  onClick={handleTogglePasswordVisibility}
+                                  edge="end"
+                                >
+                                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                                </IconButton>
+                              </InputAdornment>
+                            ),
+                          }}
+                        />
             </div>
             <div>
               <Button
@@ -116,7 +137,7 @@ export default function PfIntro() {
                   Do not have an account?{" "}
                   <span
                     href="/"
-                    style={{ color: "#909dff" }}
+                    style={{ color: "#909dff", cursor: 'pointer', textDecoration: 'underline' }}
                     onClick={SignUpPage}
                   >
                     SignUp

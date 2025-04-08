@@ -5,6 +5,7 @@ import PfHead from '../PfHead'
 import SignUpPage from '../SignUpPage'
 
 
+
 export default function Routing() {
   return (
     <div>
@@ -15,8 +16,6 @@ export default function Routing() {
       <Route path="/PfHead" element={<PfHead />} >
       </Route>
       <Route path="/SignUpPage" element={<SignUpPage />} />
-      
-    
     </Routes>
   </BrowserRouter>
     </div>
