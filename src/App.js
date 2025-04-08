@@ -1,6 +1,9 @@
 import "./App.css";
-// import PfHead from "./components/PfHead";
-// import PfIntro from "./components/PfIntro";
+
+import Routing from './components/Routing/Routing'
+function App() {
+  return (
+    <Routing/>
 import Routing from "./components/routing/Routing";
 
 function App() {
