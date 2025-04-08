@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from 'react'
 import Box from "@mui/material/Box";
 import headback from "./headback.jpg";
 import MyImage from "../MyImage.JPG";
@@ -8,17 +8,24 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
+import { IconButton, InputAdornment } from "@mui/material";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 import "./SignUpPage.css";
 // import SignUpPage from './SignUpPage'
 import { useNavigate } from "react-router-dom";
 
 
 export default function PfIntro() {
+    const [password, setPassword] = useState("");
+        const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const SignUpPage = (e) => {
     // console.log("SignUp clicked");
     e.preventDefault();
-    navigate("/SignUpPage");
+    navigate("/signup");
+  };
+  const handleTogglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
   return (
     <>

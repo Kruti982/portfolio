@@ -13,9 +13,10 @@ export default function Routing() {
     <Routes>
       <Route path="/" element={<Pflogin />} >
       </Route>
-      <Route path="/PfHead" element={<PfHead />} >
+      <Route path="/head" element={<PfHead />} >
       </Route>
-      <Route path="/SignUpPage" element={<SignUpPage />} />
+      <Route path="/signup" element={<SignUpPage />} />
+      
     </Routes>
   </BrowserRouter>
     </div>
