@@ -12,7 +12,7 @@ import { Toaster, toast } from "react-hot-toast";
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { useAuthState } from "react-firebase-hooks/auth";
-import Dashboard from '../Dashboard/Dashboard'
+import Home from '../Home/Home'
 
 
 const Login = () => {
@@ -83,7 +83,7 @@ const Login = () => {
   }
   const [userID] = useAuthState(auth);
 	// return user ? <Dashboard /> : <Login />;
-  return userID ? <Dashboard /> : 
+  return userID ? <Home /> : 
 
   
     <div style={{backgroundColor:"black", alignItems:"center"}}>
