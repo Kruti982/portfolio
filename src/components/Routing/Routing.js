@@ -10,6 +10,7 @@ import Login from '../Login/Login'
 
 
 import { getDocs, collection } from "firebase/firestore";
+import Googlesignin from "../GoogleSignIn/Googlesignin";
 
 
 export default function Routing () {
@@ -45,7 +46,8 @@ export default function Routing () {
        <Routes>
          <Route path="/login" element={<Login />} >
          </Route>
-         
+         <Route path="/signin" element={<Googlesignin />} >
+         </Route>         
       
          {/* <Route path="*" element={<NoPageFound />} /> */}
        
